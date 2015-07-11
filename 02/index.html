@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+
+  <title>When you pray for rain you gotta deal with the mud too.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link rel="search" type="application/opensearchdescription+xml" href="http://www.catais.org/geoig/services/search/opensearchdescription.xml" title="INSPIRE Download Service (MDX Pilot)" />
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+
+  $(function() {
+    $('form').each(function() {
+      $(this).find('input').keypress(function(e) {
+        if(e.which == 10 || e.which == 13) {
+          this.form.submit();
+        }
+      });
+      $(this).find('input[type=submit]').hide();
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="intro grey darken-3 z-depth-1">
+      <h1 class="grey-text text-darken-3">MDX</h1>
+      <h5 class="grey lighten-4 grey-text text-darken-1">Modellkonforme Bereitstellung von Geodaten</h5>
+    </div>
+  </header>
+
+  <main>
+    <div class="container about">
+      <div class="row">
+        <div class="input-field col s12">
+          <form name="searchDataset" action="http://www.catais.org/geoig/services/search" target="_blank" method="GET">
+            <i class="material-icons prefix">search</i>
+            <input name="q" value="" id="dataset" type="text" class="validate">
+            <label class="active" for="dataset">Search Dataset</label>
+            <input type="submit" value="Submit"/>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m4 l4">
+          <h6>Handlungsanweisungen</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur <a href="#" class="light-blue-text text-darken-1">adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col s12 m4 l4">
+          <h6>Datenformate</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <a href="#" class="light-blue-text text-darken-1">dolore</a> magna aliqua. What are you, a fucking park ranger? Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col s12 m4 l4">
+          <h6>Bereitstellungstechnologien</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#modalWFS" class="light-blue-text text-darken-1 modal-trigger">WFS</a> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#" class="light-blue-text text-darken-1">labore</a> et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <!-- Modal Structure -->
+      <div id="modalWFS" class="modal">
+        <div class="modal-content">
+          <h4>Web Feature Service</h4>
+          <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Close</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="page-footer light-blue darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Arbeitsgruppe</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">IKGEO</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">KOGIS</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2015 Copyright Text
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
